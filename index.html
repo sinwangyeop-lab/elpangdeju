@@ -4,14 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>엘팡드주 | 울산 남구 야음동 베이커리 카페 - 주버거, 버터떡, 식빵, 소금빵</title>
-<meta name="description" content="울산 남구 야음로 15 베이커리 카페 엘팡드주. 주버거와 버터떡으로 유명하며 식빵, 소금빵, 샌드위치를 매일 직접 굽습니다. 매일 08:30-20:00 영업, 주차 가능, 단체·예약·포장·배달 가능.">
+<meta name="description" content="울산 남구 야음로 15 베이커리 카페 엘팡드주. 주버거와 버터떡으로 유명하며 식빵, 소금빵, 페이스트리, 피자빵, 샌드위치를 매일 직접 굽습니다. 매일 08:30-20:00 영업, 주차 가능, 단체·예약·포장·배달 가능.">
 <link rel="canonical" href="https://sinwangyeop-lab.github.io/elpangdeju/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="엘팡드주 | 울산 남구 야음동 베이커리 카페">
+<meta property="og:description" content="주버거, 버터떡, 식빵, 소금빵. 울산에 하나쯤 있었으면 하는 빵집.">
+<meta property="og:image" content="https://sinwangyeop-lab.github.io/elpangdeju/images/sourdough.jpg">
+<meta property="og:url" content="https://sinwangyeop-lab.github.io/elpangdeju/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Bakery",
   "name": "엘팡드주",
-  "description": "울산 남구 베이커리 카페. 주버거, 버터떡, 식빵, 소금빵, 샌드위치를 매일 직접 굽습니다.",
+  "alternateName": "EL PAN DE JU",
+  "description": "울산 남구 베이커리 카페. 주버거, 버터떡, 식빵, 소금빵, 페이스트리, 피자빵, 샌드위치를 매일 직접 굽습니다.",
+  "image": "https://sinwangyeop-lab.github.io/elpangdeju/images/sourdough.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "야음로 15 1층",
@@ -32,37 +39,156 @@
 }
 </script>
 <style>
-  body { font-family: sans-serif; max-width: 760px; margin: 0 auto; padding: 24px; line-height: 1.7; color: #222; }
-  h1 { font-size: 2rem; }
-  h2 { margin-top: 2rem; border-bottom: 2px solid #e8c9a0; padding-bottom: 4px; }
-  .menu li { margin-bottom: 6px; }
+  :root { --bg:#fbf6ee; --ink:#2b2118; --sub:#6b5b4b; --accent:#b8743a; --line:#e8d9c3; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; background:var(--bg); color:var(--ink); line-height:1.75; }
+  img { display:block; width:100%; height:100%; object-fit:cover; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  .hero { position:relative; height:78vh; min-height:440px; max-height:720px; color:#fff; }
+  .hero::after { content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(20,12,6,.78), rgba(20,12,6,.1) 60%); }
+  .hero img { position:absolute; inset:0; }
+  .hero .txt { position:absolute; z-index:2; left:0; right:0; bottom:0; padding:0 20px 36px; max-width:960px; margin:0 auto; }
+  .hero small { letter-spacing:.2em; opacity:.85; }
+  .hero h1 { margin:6px 0 10px; font-size:2.6rem; line-height:1.2; }
+  .hero p { margin:0; font-size:1.05rem; max-width:34em; }
+  section { padding:48px 0 8px; }
+  h2 { font-size:1.5rem; margin:0 0 6px; }
+  .lead { color:var(--sub); margin:0 0 22px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .card .ph { aspect-ratio:4/3; }
+  .card .b { padding:16px 18px 20px; }
+  .card h3 { margin:0 0 4px; font-size:1.2rem; }
+  .card .rank { display:inline-block; font-size:.78rem; color:#fff; background:var(--accent); border-radius:20px; padding:1px 10px; margin-bottom:6px; }
+  .card p { margin:0; color:var(--sub); font-size:.95rem; }
+  .card.textonly { display:flex; align-items:center; background:#f3e6d2; }
+  .gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:10px; }
+  .gallery figure { margin:0; position:relative; aspect-ratio:1; border-radius:10px; overflow:hidden; }
+  .gallery figcaption { position:absolute; left:0; right:0; bottom:0; padding:18px 10px 8px; font-size:.82rem; color:#fff; background:linear-gradient(to top, rgba(0,0,0,.65), transparent); }
+  .story { background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-top:48px; padding:44px 0; }
+  .story p { max-width:36em; }
+  .info { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+  .info dl { margin:0; }
+  .info dt { font-weight:700; margin-top:10px; }
+  .info dd { margin:0; color:var(--sub); }
+  .btns { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+  .btn { display:inline-block; padding:12px 20px; border-radius:30px; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; }
+  .btn.alt { background:#fff; color:var(--accent); border:1px solid var(--accent); }
+  footer { text-align:center; color:var(--sub); font-size:.85rem; padding:36px 20px 48px; }
+  html { scroll-behavior:smooth; }
+  section, .story { scroll-margin-top:64px; }
+  nav.side { position:sticky; top:0; z-index:10; display:flex; gap:6px; overflow-x:auto; padding:10px 14px; background:rgba(251,246,238,.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
+  nav.side a { flex:none; padding:7px 14px; border-radius:20px; color:var(--ink); text-decoration:none; font-size:.92rem; font-weight:600; border:1px solid var(--line); background:#fff; }
+  nav.side a:hover { color:var(--accent); border-color:var(--accent); }
+  @media (min-width:1200px){
+    nav.side { position:fixed; left:28px; top:50%; transform:translateY(-50%); flex-direction:column; width:170px; padding:14px; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    nav.side a { border:0; border-radius:8px; }
+    section, .story { scroll-margin-top:24px; }
+  }
+  @media (min-width:700px){ .hero h1{font-size:3.6rem;} }
 </style>
 </head>
 <body>
-<h1>엘팡드주</h1>
-<p>울산 남구 야음동에서 매일 빵을 굽는 베이커리 카페입니다. 주버거와 버터떡으로 알려졌지만, 식빵·소금빵·샌드위치까지 하루 수백 개씩 나가는 동네 빵집이에요.</p>
 
-<h2>대표 메뉴</h2>
-<ul class="menu">
-  <li><strong>주버거</strong> — 어릴 적 먹던 옛날 햄버거를 다시 만든 빵. 떡갈비 패티에 계란 후라이, 그리고 풍성하게 올린 양배추 사라다가 포인트입니다.</li>
-  <li><strong>버터떡</strong> — 쫄깃한 떡 식감에 달콤한 바닐라 향이 포인트. 흔한 버터떡보다 한층 고급스럽게 만들었습니다.</li>
-  <li><strong>식빵</strong> — 엘팡드주의 또 다른 시그니처. 촉촉하고 쫄깃한 결에 밀 본연의 은은한 단맛이 살아 있어, 그냥 먹어도 샌드위치로 만들어도 좋습니다.</li>
-  <li><strong>소금빵</strong> — 담백한 반죽에 고급 버터를 넣어 구운 빵. 밑면은 바삭하고 속은 버터 향 가득 부드럽습니다.</li>
-  <li><strong>샌드위치</strong> — 시즌마다 바뀌고 더해지는 다양한 샌드위치. 대표는 프랑스식 하드 바게트에 잠봉과 루꼴라를 넣은 루꼴라 잠봉 바게트, 그리고 아보카도 베이컨 바게트입니다.</li>
-</ul>
+<header class="hero">
+  <img src="images/sourdough.jpg" alt="엘팡드주에서 매일 굽는 사워도우 빵" style="object-position:50% 40%">
+  <div class="txt">
+    <small>EL PAN DE JU · 울산 남구 야음동</small>
+    <h1>엘팡드주</h1>
+    <p>울산에 하나쯤은 있었으면 하는 빵집. 제빵사가 매일 직접 굽는 주버거, 버터떡, 식빵, 소금빵.</p>
+  </div>
+</header>
 
-<h2>매장 안내</h2>
-<p>주소: 울산 남구 야음로 15 1층<br>
-영업시간: 매일 08:30 - 20:00 (설날 당일 휴무)<br>
-전화: 052-227-0145<br>
-편의시설: 주차, 무선 인터넷, 유아의자, 남/녀 화장실 구분<br>
-이용: 단체 이용, 예약, 포장, 배달 가능</p>
+<nav class="side" aria-label="페이지 목록">
+  <a href="#menu">대표 메뉴</a>
+  <a href="#breads">샌드위치와 빵</a>
+  <a href="#story">우리 가게 이야기</a>
+  <a href="#visit">오시는 길</a>
+</nav>
 
-<h2>우리 가게 이야기</h2>
-<p>엘팡드주는 "울산에 하나쯤은 있었으면 하는 곳"을 만들고 싶다는 마음에서 시작했습니다. 오랫동안 빵을 만들어 온 제빵사의 가치관을 그대로 담은 가게입니다.<br><br>
-빵의 기본 기술은 지키되, 늘 새로운 시도를 멈추지 않습니다. 재료도 마찬가지예요. 누구나 "좋은 재료"를 말하지만, 저희는 거기서 한 단계 더 올라가 울산에서 흔히 쓰지 않는 고급 재료를 골라 씁니다. 매일 굽는 빵 하나하나에 그 차이가 담겨 있습니다.</p>
+<main class="wrap">
 
-<h2>SNS</h2>
-<p><a href="https://www.instagram.com/eauble_">인스타그램</a> · <a href="https://naver.me/5L7UrUNV">네이버 플레이스</a></p>
+<section id="menu">
+  <h2>대표 메뉴</h2>
+  <p class="lead">플레이스 결제 기준 많이 찾으시는 순서예요.</p>
+  <div class="cards">
+    <article class="card">
+      <div class="ph"><img src="images/jubuger.jpg" alt="주버거" loading="lazy"></div>
+      <div class="b"><span class="rank">1위</span>
+        <h3>주버거</h3>
+        <p>어릴 적 먹던 옛날 햄버거를 다시 만든 빵. 떡갈비 패티에 계란 후라이, 풍성하게 올린 양배추 사라다가 포인트입니다.</p></div>
+    </article>
+    <article class="card">
+      <div class="ph"><img src="images/butter-tteok.jpg" alt="엘팡드주 버터떡" loading="lazy"></div>
+      <div class="b"><span class="rank">2위</span>
+        <h3>버터떡</h3>
+        <p>쫄깃한 떡 식감에 달콤한 바닐라 향. 흔한 버터떡보다 한층 고급스럽게 만들었습니다.</p></div>
+    </article>
+    <article class="card">
+      <div class="ph"><img src="images/shokupan.jpg" alt="엘팡드주 식빵" loading="lazy"></div>
+      <div class="b"><span class="rank">3위</span>
+        <h3>식빵</h3>
+        <p>촉촉하고 쫄깃한 결에 밀 본연의 은은한 단맛. 그냥 먹어도, 샌드위치로 만들어도 좋습니다.</p></div>
+    </article>
+  </div>
+</section>
+
+<section id="breads">
+  <h2>소금빵 · 샌드위치 · 페이스트리 · 구움과자</h2>
+  <p class="lead">소금빵은 고급 버터를 넣어 밑면은 바삭하고 속은 부드럽게. 샌드위치는 시즌마다 바뀌고 더해집니다.</p>
+  <div class="gallery">
+    <figure><img src="images/baked-sweets.jpg" alt="구움과자 코너 - 파운드케이크, 휘낭시에, 크루아상" loading="lazy"><figcaption>구움과자 코너</figcaption></figure>
+    <figure><img src="images/jambon-arugula.jpg" alt="루꼴라 잠봉 바게트 샌드위치" loading="lazy"><figcaption>루꼴라 잠봉 바게트</figcaption></figure>
+    <figure><img src="images/mont-blanc-pastry.jpg" alt="몽블랑 페이스트리" loading="lazy"><figcaption>몽블랑 페이스트리</figcaption></figure>
+    <figure><img src="images/cherry-pastry-tart.jpg" alt="체리 페이스트리 타르트" loading="lazy"><figcaption>체리 페이스트리 타르트</figcaption></figure>
+    <figure><img src="images/shrimp-pizza-bread.jpg" alt="쉬림프 피자빵" loading="lazy"><figcaption>쉬림프</figcaption></figure>
+    <figure><img src="images/sausage-potato.jpg" alt="소세지 포테이토 빵" loading="lazy"><figcaption>소세지 포테이토</figcaption></figure>
+    <figure><img src="images/pizza-bread-case.jpg" alt="피자빵 - 잠봉 루꼴라, 포테이토, 페퍼로니" loading="lazy"><figcaption>피자빵</figcaption></figure>
+    <figure><img src="images/pretzel.jpg" alt="프레첼 - 버터, 팥버터, 카야잼" loading="lazy"><figcaption>프레첼</figcaption></figure>
+    <figure><img src="images/fig-sandwich.jpg" alt="무화과 파누아쪼" loading="lazy"><figcaption>무화과 파누아쪼</figcaption></figure>
+    <figure><img src="images/croissant-sandwich.jpg" alt="연어 크루아상" loading="lazy"><figcaption>연어 크루아상</figcaption></figure>
+    <figure><img src="images/sandwich-wraps.jpg" alt="잠봉 루꼴라 샌드위치" loading="lazy"><figcaption>잠봉 루꼴라</figcaption></figure>
+    <figure><img src="images/sandwich-case.jpg" alt="샌드위치 메뉴" loading="lazy"><figcaption>샌드위치 메뉴</figcaption></figure>
+    <figure><img src="images/mini-burgers.jpg" alt="치킨 버거" loading="lazy"><figcaption>치킨 버거</figcaption></figure>
+    <figure><img src="images/sourdough.jpg" alt="사워도우" loading="lazy"><figcaption>사워도우</figcaption></figure>
+    <figure><img src="images/bakery-case-1.jpg" alt="사워도우 베리에이션" loading="lazy"><figcaption>사워도우 베리에이션</figcaption></figure>
+    <figure><img src="images/rustic-breads.jpg" alt="초코바게트" loading="lazy"><figcaption>초코바게트</figcaption></figure>
+    <figure><img src="images/cherry-tarts-case.jpg" alt="과일 페스츄리" loading="lazy"><figcaption>과일 페스츄리</figcaption></figure>
+  </div>
+</section>
+
+</main>
+
+<div class="story" id="story">
+  <div class="wrap">
+    <h2>우리 가게 이야기</h2>
+    <p>엘팡드주는 "울산에 하나쯤은 있었으면 하는 곳"을 만들고 싶다는 마음에서 시작했습니다. 오랫동안 빵을 만들어 온 제빵사의 가치관을 그대로 담은 가게입니다.</p>
+    <p>빵의 기본 기술은 지키되, 늘 새로운 시도를 멈추지 않습니다. 누구나 "좋은 재료"를 말하지만, 저희는 거기서 한 단계 더 올라가 울산에서 흔히 쓰지 않는 고급 재료를 골라 씁니다. 매일 굽는 빵 하나하나에 그 차이가 담겨 있습니다.</p>
+  </div>
+</div>
+
+<main class="wrap">
+<section id="visit">
+  <h2>오시는 길 · 매장 안내</h2>
+  <div class="info">
+    <dl>
+      <dt>주소</dt><dd>울산 남구 야음로 15 1층</dd>
+      <dt>영업시간</dt><dd>매일 08:30 - 20:00 (설날 당일 휴무)</dd>
+      <dt>전화</dt><dd><a href="tel:0522270145">052-227-0145</a></dd>
+    </dl>
+    <dl>
+      <dt>편의시설</dt><dd>주차, 무선 인터넷, 유아의자, 남/녀 화장실 구분</dd>
+      <dt>이용</dt><dd>단체 이용, 예약, 포장, 배달 가능</dd>
+    </dl>
+  </div>
+  <div class="btns">
+    <a class="btn" href="https://naver.me/5L7UrUNV">네이버 플레이스</a>
+    <a class="btn alt" href="https://www.instagram.com/eauble_">인스타그램</a>
+    <a class="btn alt" href="tel:0522270145">전화하기</a>
+  </div>
+</section>
+</main>
+
+<footer>© 엘팡드주 · 울산 남구 야음로 15 1층</footer>
 </body>
 </html>
