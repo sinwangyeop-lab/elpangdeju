@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sinwangyeop-lab.github.io/elpangdeju/sitemap.xml
